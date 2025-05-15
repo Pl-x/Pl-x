@@ -18,7 +18,7 @@ const app = express();
 
 const allowedOrigins = process.env.NODE_ENV === 'production'
   ? ['https://yourdomain.com']
-  : ['https://17f6-154-159-238-83.ngrok-free.app'];
+  : ['http://127.0.0.1:3000'];
 
 // Middleware
 app.use(cors({
