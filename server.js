@@ -16,15 +16,9 @@ dotenv.config();
 
 const app = express();
 
-const allowedOrigins = process.env.NODE_ENV === 'production'
-  ? ['https://yourdomain.com']
-  : ['http://127.0.0.1:3000'];
 
 // Middleware
-app.use(cors({
-    origin: allowedOrigins,
-    credentials: true
-  }));
+app.use(cors());
 app.use(express.json());
 app.use(helmet({
   frameguard: { action: 'deny' }
