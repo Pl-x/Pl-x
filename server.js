@@ -18,7 +18,7 @@ const app = express();
 
 const allowedOrigins = process.env.NODE_ENV === 'production'
   ? ['https://yourdomain.com']
-  : ['https://0008-154-159-238-83.ngrok-free.app'];
+  : ['https://17f6-154-159-238-83.ngrok-free.app'];
 
 // Middleware
 app.use(cors({
@@ -39,7 +39,7 @@ const limiter = rateLimit({
 
 // MySQL Connection Pool
 const pool = mysql.createPool({
-    host: process.env.DB_HOST || 'localhost',
+    host: process.env.DB_HOST || 'https://17f6-154-159-238-83.ngrok-free.app',
     user: process.env.DB_USER || 'admin',
     password: process.env.DB_PASSWORD || '',
     database: process.env.DB_NAME || 'noble_capital',
